@@ -1,8 +1,13 @@
 package com.example.neethu.gcmservice;
 
 import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -20,5 +25,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mRegistrationProgressBar= (ProgressBar) findViewById(R.id.progressBar);
         mInformationTextview= (TextView) findViewById(R.id.textView);
+        mREgistrationBroadcastReceiver=new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                mRegistrationProgressBar.setVisibility(View.GONE);
+                SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(context);
+                Boolean sendToken=sharedPreferences.getBoolean(Q)
+
+
+            }
+        }
     }
 }
