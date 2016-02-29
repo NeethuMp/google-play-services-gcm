@@ -24,16 +24,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mRegistrationProgressBar= (ProgressBar) findViewById(R.id.progressBar);
-        mInformationTextview= (TextView) findViewById(R.id.textView);
+        mInformationTextview= (TextView) findViewById(R.id.informationTextview);
         mREgistrationBroadcastReceiver=new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 mRegistrationProgressBar.setVisibility(View.GONE);
-                SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(context);
-                Boolean sendToken=sharedPreferences.getBoolean(Q)
-
-
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+                Boolean sendToken = sharedPreferences.getBoolean(QuickstartPreferences.SEND_TOKEN_TO_SERVER, false);
+                if (sendToken) {
+                    mInformationTextview.setText(R.string.gcm_send_message);
+                } else {
+                    mInformationTextview.setText(R.string.token_error_message);
+                }
+                if(checkPlayServices){
+                    Intent intent=new Intent(MainActivity.this,RegistrationIntent.class);
+                    startActivity(intent);
+                }
             }
-        }
+        };
     }
 }
