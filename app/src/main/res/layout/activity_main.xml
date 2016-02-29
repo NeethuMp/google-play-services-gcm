@@ -14,14 +14,14 @@
         android:layout_height="wrap_content"
         android:textSize="25dp"
         android:text="Generating InstanceID Token..."
-        android:id="@+id/textView" />
+        android:id="@+id/informationTextview" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/informationTextview"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="145dp" />
 </RelativeLayout>
