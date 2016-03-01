@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_id": "gcmservice-3dd61",
+    "project_number": "635650686744",
+    "name": "GcmService"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635650686744:android:90c2fc0b9fd1bc08",
+        "client_id": "android:com.example.neethu.gcmservice",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.example.neethu.gcmservice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
